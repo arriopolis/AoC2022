@@ -1,0 +1,1 @@
+print(sum(ord(s) - ord('a') + 1 if ord('a') <= ord(s) <= ord('z') else ord(s) - ord('A') + 27 for lines in [list(map(lambda x : x.strip(), open('input.txt')))] for a,b,c in zip(lines[::3], lines[1::3], lines[2::3]) for s in [set(a).intersection(b).intersection(c).pop()]))

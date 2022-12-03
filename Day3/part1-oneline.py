@@ -1,0 +1,1 @@
+print(sum(ord(s) - ord('a') + 1 if ord('a') <= ord(s) <= ord('z') else ord(s) - ord('A') + 27 for items in map(lambda x : list(x.strip()), open('input.txt')) for s in [set(items[:len(items)//2]).intersection(items[len(items)//2:]).pop()]))
