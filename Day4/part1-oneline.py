@@ -1,0 +1,1 @@
+print(sum(1 for line in open('input.txt') for (a,b),(c,d) in [map(lambda x : x.split('-'), line.strip().split(','))] for a,b,c,d in [map(int, (a,b,c,d))] if (a <= c and b >= d) or (c <= a and d >= b)))
