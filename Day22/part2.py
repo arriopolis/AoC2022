@@ -101,31 +101,6 @@ for instr in instrs:
 
             assert (newx,newy) in grid, f"{newx,newx} is not in the grid. Left from {x,y}."
 
-            # if not nowrap:
-            #     compress_grid = set([(x//10,y//10) for x,y in grid])
-            #     compress_newx, compress_newy = newx//10, newy//10
-            #     compress_x, compress_y = x//10, y//10
-            #     print(x, y, heading, newx, newy, newheading)
-            #     for y2 in range(20):
-            #         s = ''
-            #         for x2 in range(15):
-            #             if (x2,y2) not in compress_grid: s += ' '
-            #             elif (x2,y2) == (compress_newx, compress_newy):
-            #                 if newheading == (1,0): s += '>'
-            #                 if newheading == (0,1): s += 'v'
-            #                 if newheading == (-1,0): s += '<'
-            #                 if newheading == (0,-1): s += '^'
-            #             elif (x2,y2) == (compress_x, compress_y):
-            #                 if heading == (1,0): s += '>'
-            #                 if heading == (0,1): s += 'v'
-            #                 if heading == (-1,0): s += '<'
-            #                 if heading == (0,-1): s += '^'
-            #             else: s += '.'
-            #         print(s)
-            #     print()
-            #     import time
-            #     time.sleep(1)
-
             if (newx,newy) in walls: break
 
             x,y = newx,newy
